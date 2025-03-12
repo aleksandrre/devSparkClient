@@ -1,0 +1,145 @@
+/* Navbar Styles */
+
+.navbar {
+  background-color: white;
+  height: 70px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--spacing-lg);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navbar-toggle-btn {
+  display: none;
+  background: transparent;
+  color: var(--dark-color);
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border: none;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.navbar-logo-icon {
+  color: var(--primary-color);
+  font-size: var(--font-size-xl);
+}
+
+.navbar-logo-text {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  color: var(--dark-color);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.create-ticket-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-speed);
+}
+
+.create-ticket-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.user-name {
+  font-weight: var(--font-weight-medium);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: white;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-speed);
+}
+
+.logout-btn:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .create-ticket-btn span {
+    display: none;
+  }
+
+  .logout-btn span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle-btn {
+    display: block;
+  }
+
+  .navbar-logo-text {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: var(--spacing-sm);
+  }
+}
